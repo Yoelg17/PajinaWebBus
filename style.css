@@ -1,0 +1,174 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.fondo1 {
+  background-color: #0F172A;
+}
+.encabezado {
+  background-color: #0F172A;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  font-family: fantasy;
+}
+.logo {
+  height: auto;
+  width: 220px;                  
+}
+
+.btnEncabezado {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+}
+
+.btnEn {
+  width: max-content;
+  padding: 8px 18px;
+  font-size: 18px;
+  color: #FBBF24;
+  background-color: #0F172A;
+  border: 3.5px solid #FBBF24;
+  border-radius: 15px;
+  text-align: center;
+  
+}
+.btnEn:hover{
+  box-shadow: 1px 1px 12px #FBBF24;
+  animation-duration: 2s;
+}
+
+.btnEn:hover {
+  background-color: #FBBF24;
+  color: black;
+  transition: all 0.7s ease;
+  cursor: pointer;
+}
+
+/* ============================ */
+/* SLIDER Y BOTON */
+/* ============================ */
+
+.slider {
+  position: relative; /* Base para que el título no se vaya a otra parte de la web */
+  width: 100%;
+  
+}
+.opacidad{
+  filter: opacity(20%);
+}
+.viajaseguro {
+  position: absolute;
+  top: 15%; /* Lo centra verticalmente */
+  left: 50%; /* Lo centra horizontalmente */
+  transform: translate(-50%, -50%); /* Ajuste de centrado perfecto */
+  z-index: 99; /* Obliga al título a flotar por ENCIMA de las imágenes del slider */
+  pointer-events: none; /* Opcional: permite hacer clic a través del texto si hay botones atrás */
+  
+  /* Estilos visuales de ejemplo */
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.6); 
+  font-family: fantasy;
+}
+.poma {
+  position: absolute;
+  top: 29%; 
+  left: 50%; 
+  transform: translate(-50%, -50%);
+  z-index: 99; 
+  pointer-events: none;
+  color: #FBBF24;
+  font-size: 130px;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.6); 
+  font-family: fantasy;
+}
+.pomaba {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); 
+  z-index: 99;
+  pointer-events: none;
+  color: #FBBF24;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.6); 
+  font-size: 130px; 
+  font-family: fantasy;
+}
+.pomabam {
+  position: absolute;
+  top: 64%;
+  left: 50%;
+  transform: translate(-50%, -50%); 
+  z-index: 99;
+  pointer-events: none;
+  color: #ffffff;
+  font-size: 20px;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
+}.pomabamb {
+  position: absolute;
+  top: 68%;
+  left: 50%;
+  transform: translate(-50%, -50%); 
+  z-index: 99;
+  pointer-events: none;
+  color: #ffffff;
+  font-size: 20px;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
+}
+
+.titubtn{
+  border-radius: 20px;
+  font-size: 28px;
+  background-color: #FBBF24;
+  caret-color: #FBBF24;
+  border: none;
+  cursor: pointer;
+  font-family: arial;
+  font-weight: bold;
+  color: rgb(0, 0, 0);
+  position: absolute;
+  top: 85%;
+  left: 35%;
+  transform: translate(-50%, -50%); 
+  z-index: 99;
+  padding: 5px 15px;
+}
+.titubtn:hover{
+  background-color: transparent;
+  color: white;
+  border: #FBBF24;
+  border: solid 3px #FBBF24;
+  box-shadow: 1px 1px 12px 1svb #FBBF24;
+}
+.titulobtn{
+  border-radius: 20px;
+  border: solid 3px #FBBF24;
+  font-size: 28px;
+  background-color: transparent;
+  font-family: arial;
+  transform: translate(-50%, -50%); 
+  z-index: 99;
+  padding: 5px 15px;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  position: absolute;
+  top: 85%;
+  left: 65%;
+
+}
+.titulobtn:hover{
+  background-color: #FBBF24;
+  color: rgb(0, 0, 0);
+  border: #FBBF24;
+  border: solid 3px #FBBF24;
+  box-shadow: 1px 1px 12px #FBBF24;
+}
