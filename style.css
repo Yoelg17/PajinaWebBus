@@ -147,7 +147,7 @@
   color: white;
   border: #FBBF24;
   border: solid 3px #FBBF24;
-  box-shadow: 1px 1px 12px 1svb #FBBF24;
+  box-shadow: 1px 1px 12px #FBBF24;
 }
 .titulobtn{
   border-radius: 20px;
@@ -171,4 +171,22 @@
   border: #FBBF24;
   border: solid 3px #FBBF24;
   box-shadow: 1px 1px 12px #FBBF24;
+}
+
+/* BARRA DE BUSQUEDA*/
+
+.navbar{
+  background-color: #0F172A;
+  width: 70%;
+  display: flex;
+  justify-content:center;
+  padding: 15px;
+  border: solid 2px #586575;
+  border-radius: 18px;
+  position: absolute;
+  top: 105%;
+  left: 50%;
+  transform: translate(-50%, -50%); 
+  z-index: 99;
+  
 }
