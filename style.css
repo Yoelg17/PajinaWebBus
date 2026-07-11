@@ -190,3 +190,87 @@
   z-index: 99;
   
 }
+
+
+/*RUTAS DISPONIBLES*/
+.cuadro{
+  background-color: #0F172A;
+  width: 95%;
+  border-radius: 10px;
+  border: solid 2px #586575;
+  box-shadow: 1px 1px 12px #586575;
+  
+}
+.rutas{
+  padding: 0 40px;
+  width: 30%;
+  color: #FBBF24;
+  display: inline-block;
+  position: relative;
+  
+}
+
+.rutas::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;           /* Posición debajo de la palabra */
+    width: 0;               /* Empieza invisible (sin ancho) */
+    height: 3px;
+    background-color: #FBBF24;
+    transition: width 0.3s ease; /* Hace que se estire suavemente */
+}
+.rutas:hover::after {
+    width: 100%;
+}
+
+
+.lasrutas{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: calc(30px);
+  font-size: 30px;
+  padding: 20px;
+  font-family: cursive;
+}
+
+.rutasbrder{
+  background-color: #586575;
+ border-radius: 10px;
+
+}
+.rutasbrder:hover{
+  box-shadow: 2px 2px 1dvw #FBBF24;
+  transition: all 0.5s ease;
+  transform: translateY(-5px);
+}
+
+.imgrutas{
+  border-radius: 10px;
+  padding: 2px;
+}
+.horarutas{
+  text-align: start;
+  padding: 5px;
+  font-size: 15px;
+}
+.solesrutas{
+  text-align: center;
+  padding: 4px;
+  color: #0F172A;
+  background-color: #FBBF24;
+  width: 50%;
+  border-radius: 20px;
+  border: none;
+  margin-bottom: 4px;
+  box-shadow: 1px 1px 3vb;
+}
+.solesrutas:hover{
+  transition: all 0.5s ease;
+  transform: translateY(-2px);
+}
+
+
+
+
