@@ -6,6 +6,7 @@
 
 .fondo1 {
   background-color: #0F172A;
+  
 }
 .encabezado {
   background-color: #0F172A;
@@ -66,7 +67,7 @@
   
 }
 .opacidad{
-  filter: opacity(20%);
+  filter: opacity(40%);
 }
 .viajaseguro {
   position: absolute;
@@ -115,9 +116,21 @@
   color: #ffffff;
   font-size: 20px;
   text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
-}.pomabamb {
+}
+.pomabamb {
   position: absolute;
   top: 68%;
+  left: 50%;
+  transform: translate(-50%, -50%); 
+  z-index: 99;
+  pointer-events: none;
+  color: #ffffff;
+  font-size: 20px;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
+}
+.pomabamba {
+  position: absolute;
+  top: 72%;
   left: 50%;
   transform: translate(-50%, -50%); 
   z-index: 99;
@@ -190,7 +203,45 @@
   left: 50%;
   transform: translate(-50%, -50%); 
   z-index: 99;
+  display: block;
+}
+
+.express{
+  width: 100%;
+  height: 470px; /* Ajusta este valor: entre más pequeño, más bajita y alargada se verá */
+  display: block;
+  filter: opacity(65%);
+  transition: all 2s ease;
+}
+.express:hover{
   
+  box-shadow: 1px 1px 12px #FBBF24;
+  transition: all 3s ease;
+  transform: translateY(-5px);
+}
+.ex {
+  position: absolute;
+  top: 125%; 
+  left: 50%; 
+  transform: translate(-50%, -50%);
+  z-index: 99; 
+  pointer-events: none;
+  color: #ffffff;
+  font-size: 60px;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.6); 
+  font-family: fantasy;
+}
+.exp {
+  position: absolute;
+  top: 149%; 
+  left: 50%; 
+  transform: translate(-50%, -50%);
+  z-index: 99; 
+  pointer-events: none;
+  color: #ffffff;
+  font-size: 24px;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.6); 
+  font-family: cursive;
 }
 
 
@@ -418,5 +469,16 @@
   text-align: start;
 }
 
+/*============================= 
+PAJINA 2
+===============================*/
+.fondo2 {
+  background-color: #0F172A;
+}
 
-
+.rut_hora{
+  text-align: center;
+  color: #FBBF24;
+  font-family: fantasy;
+  font-size: 50px;
+}
