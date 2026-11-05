@@ -14,30 +14,297 @@
         <nav class="btnEncabezado">
     
             <a href="../index.html" class="btnEn">inicio</a>
-            <a href="rutas.html" class="btnEn">Rutas</a>
+<a href="rutas.html" class="btnEn activo">Rutas</a>
             <a href="empresas.html" class="btnEn">empresas</a>
             <a href="nosotros.html" class="btnEn">Nosotros</a>
             <a href="contactos.html" class="btnEn">contactos</a>
         </nav>
     </header>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <center>
-        <h1 class="rut_hora">EXPLORA NUESTRAS RUTAS</h1>
-        <h1 class="rut_hora">INTERPROVINCIALES</h1>
+    <section class="titulo-pagina">
+    <p class="titulo-pagina-mini">Nuestros destinos</p>
+    <h1 class="titulo-pagina-h1">EXPLORA NUESTRAS <span>RUTAS</span> INTERPROVINCIALES</h1>
+    <p class="titulo-pagina-sub">Elige tu destino, revisa horarios y viaja seguro con Pomabamba Express.</p>
+</section>
+<section class="container pb-5">
+    <div class="text-center mb-4">
+    <button class="filtro activo" data-filtro="todos">Todos</button>
+    <button class="filtro" data-filtro="Huaraz">Huaraz</button>
+    <button class="filtro" data-filtro="Lima">Lima</button>
+</div>
+    <div class="row g-4" id="listaRutas"></div>
+</section>
+<!-- PREGUNTAS FRECUENTES -->
+<section class="container pb-5" id="faq">
+    <h2 class="faq-titulo">Preguntas <span>frecuentes</span></h2>
+    <div class="accordion" id="acordeonFaq">
 
-    </center>
+        <div class="accordion-item">
+            <h3 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                    ¿Cuánto equipaje puedo llevar?
+                </button>
+            </h3>
+            <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#acordeonFaq">
+                <div class="accordion-body">Puedes llevar una maleta en la bodega y un bolso de mano. Si llevas carga adicional, se cobra aparte en la agencia.</div>
+            </div>
+        </div>
 
+        <div class="accordion-item">
+            <h3 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                    ¿A qué hora debo llegar al terminal?
+                </button>
+            </h3>
+            <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#acordeonFaq">
+                <div class="accordion-body">Te recomendamos llegar 30 minutos antes de la salida, con tu DNI y tu código de reserva.</div>
+            </div>
+        </div>
 
+        <div class="accordion-item">
+            <h3 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                    ¿Puedo cambiar la fecha de mi pasaje?
+                </button>
+            </h3>
+            <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#acordeonFaq">
+                <div class="accordion-body">Sí, puedes cambiarla hasta 24 horas antes del viaje, sujeto a disponibilidad de asientos.</div>
+            </div>
+        </div>
 
+        <div class="accordion-item">
+            <h3 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+                    ¿Los menores de edad pagan pasaje?
+                </button>
+            </h3>
+            <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#acordeonFaq">
+                <div class="accordion-body">Los menores que viajan con asiento propio pagan pasaje completo. Los menores deben viajar con su DNI o partida de nacimiento.</div>
+            </div>
+        </div>
 
+        <div class="accordion-item">
+            <h3 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5">
+                    ¿Cómo pago mi pasaje?
+                </button>
+            </h3>
+            <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#acordeonFaq">
+                <div class="accordion-body">Aceptamos Yape, Plin, tarjeta y pago en agencia hasta 2 horas antes de la salida.</div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="footer-content">
+        <div class="footer-contactos">
+            <h3 class="footers">Contáctanos</h3>
+            <p class="footerp">Dirección: (pon tu dirección real)</p>
+            <p class="footerp">Teléfono: (pon tu número real)</p>
+            <p class="footerp">Correo electrónico: (pon tu correo real)</p>
+        </div>
+        <div>
+            <h3 class="footers">ayuda</h3>
+            <p class="footerp"><a href="#faq" class="footer-link">Preguntas frecuentes</a></p>
+            <p class="footerp"><a href="contactos.html" class="footer-link">Contáctanos</a></p>
+            <p class="footerp">Política de privacidad</p>
+        </div>
+        <div>
+            <h3 class="footers">redes sociales</h3>
+            <h4 class="footx">Síguenos para no perderte ninguna novedad</h4>
+            <a href="#"><img class="imgredes" src="../imagenes/redes-sociales/facebbok.jpg" alt="Facebook"></a>
+            <a href="#"><img class="imgredes" src="../imagenes/redes-sociales/instagram.jpg" alt="Instagram"></a>
+            <a href="#"><img class="imgredes" src="../imagenes/redes-sociales/tiktok.jpg" alt="TikTok"></a>
+            <a href="#"><img class="imgredes" src="../imagenes/redes-sociales/Twitter.jpg" alt="Twitter"></a>
+        </div>
+    </div>
+    <br>
+    <p class="derechos">&copy; 2026 Pomabamba Express. Todos los derechos reservados.</p>
+</footer>
+<div class="modal fade" id="modalHorarios" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content modal-pomabamba">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalTitulo"></h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+            </div>
+            <div class="modal-body" id="modalCuerpo"></div>
+            <div class="modal-footer">
+                <span class="aviso-horario" id="avisoHorario"></span>
+                <button type="button" class="btn-ruta" id="modalComprar">Comprar pasaje</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- VENTANA DE COMPRA -->
+<!-- VENTANA DE COMPRA -->
+<div class="modal fade" id="modalPago" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content modal-pomabamba">
+            <div class="modal-header">
+                <h5 class="modal-title" id="tituloPago">Elige tus asientos</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+            </div>
+            <div class="modal-body">
+
+                <!-- PASO 1: ASIENTOS -->
+                <div id="pasoAsientos" class="row g-4">
+
+                    <div class="col-lg-6">
+                        <div class="bus-contenedor">
+                            <div class="bus-frente">
+                                <span class="volante"></span>
+                                <span>Frente del bus</span>
+                            </div>
+                            <div id="mapaBus"></div>
+                        </div>
+                        <div class="leyenda">
+                            <span class="leyenda-item"><span class="asiento libre"></span> Libre</span>
+                            <span class="leyenda-item"><span class="asiento elegido"></span> Elegido</span>
+                            <span class="leyenda-item"><span class="asiento ocupado"></span> Ocupado</span>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <div class="resumen-pasaje">
+                            <img src="../imagenes/buses/empresas1.jpg" alt="Bus Pomabamba Express">
+                            <div class="resumen-info">
+                                <h5 id="asRuta"></h5>
+                                <p id="asTipo" class="mb-0"></p>
+                                <p id="asLibres" class="libres mb-0"></p>
+                                <ul class="resumen-lista">
+                                    <li><span>Fecha de viaje</span><input type="date" id="asFecha" class="form-control form-control-sm fecha-input"></li>
+                                    <li><span>Hora de salida</span><strong id="asHora"></strong></li>
+                                    <li><span>Asientos</span><strong id="asAsientos">—</strong></li>
+                                    <li><span>Precio por persona</span><strong id="asPrecio"></strong></li>
+                                    <li class="total"><span>Total</span><strong id="asTotal"></strong></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <p id="errorAsientos" class="text-danger mt-3 mb-0"></p>
+                        <button type="button" class="btn-pagar w-100 mt-3" id="btnContinuar">Continuar</button>
+                    </div>
+                </div>
+
+                <!-- PASO 2: DATOS Y PAGO -->
+                <div id="pasoPago" class="row g-4 d-none">
+
+                    <div class="col-lg-5">
+                        <div class="resumen-pasaje">
+                            <img src="../imagenes/buses/empresas1.jpg" alt="Bus Pomabamba Express">
+                            <div class="resumen-info">
+                                <h5 id="resRuta"></h5>
+                                <p id="resTipo" class="mb-0"></p>
+                                <ul class="resumen-lista">
+                                    <li><span>Fecha de viaje</span><strong id="resFecha"></strong></li>
+                                    <li><span>Hora de salida</span><strong id="resHora"></strong></li>
+                                    <li><span>Asientos</span><strong id="resAsientos"></strong></li>
+                                    <li><span>Precio por persona</span><strong id="resPrecio"></strong></li>
+                                    <li class="total"><span>Total</span><strong id="resTotal"></strong></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-7">
+                        <button type="button" class="btn-volver" id="btnVolver">← Cambiar asientos</button>
+
+                        <h6 class="subtitulo-pago">1. Datos del pasajero</h6>
+                        <div class="row g-2 mb-4">
+                            <div class="col-md-8"><input type="text" id="pNombre" class="form-control" placeholder="Nombres y apellidos"></div>
+                            <div class="col-md-4"><input type="text" id="pDni" class="form-control" placeholder="DNI" maxlength="8" inputmode="numeric"></div>
+                            <div class="col-md-5"><input type="text" id="pTelefono" class="form-control" placeholder="Celular" maxlength="9" inputmode="numeric"></div>
+                            <div class="col-md-7"><input type="email" id="pCorreo" class="form-control" placeholder="Correo electrónico"></div>
+                        </div>
+
+                        <h6 class="subtitulo-pago">2. Método de pago</h6>
+                        <div class="metodos">
+                            <button type="button" class="metodo activo" data-metodo="yape">
+                                <img src="../imagenes/pagos/yape.png" alt="" onerror="this.style.display='none'">
+                                <span>Yape</span>
+                            </button>
+                            <button type="button" class="metodo" data-metodo="plin">
+                                <img src="../imagenes/pagos/plin.png" alt="" onerror="this.style.display='none'">
+                                <span>Plin</span>
+                            </button>
+                            <button type="button" class="metodo" data-metodo="tarjeta">
+                                <span class="icono-metodo">💳</span>
+                                <span>Tarjeta</span>
+                            </button>
+                            <button type="button" class="metodo" data-metodo="agencia">
+                                <span class="icono-metodo">🏢</span>
+                                <span>En agencia</span>
+                            </button>
+                        </div>
+
+                        <div class="detalle-metodo" id="detalle-yape">
+                            <div class="d-flex align-items-center gap-3 flex-wrap">
+                                <img src="../imagenes/pagos/qr-yape.png" alt="QR de Yape" class="qr-pago" onerror="this.style.display='none'">
+                                <div>
+                                    <p>Yapea al número:</p>
+                                    <p class="numero-pago">999 999 999</p>
+                                    <p class="mb-0">A nombre de <strong>Pomabamba Express</strong>. Luego presiona el botón de pagar.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="detalle-metodo d-none" id="detalle-plin">
+                            <div class="d-flex align-items-center gap-3 flex-wrap">
+                                <img src="../imagenes/pagos/qr-plin.png" alt="QR de Plin" class="qr-pago" onerror="this.style.display='none'">
+                                <div>
+                                    <p>Plinea al número:</p>
+                                    <p class="numero-pago">999 999 999</p>
+                                    <p class="mb-0">A nombre de <strong>Pomabamba Express</strong>. Luego presiona el botón de pagar.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="detalle-metodo d-none" id="detalle-tarjeta">
+                            <div class="row g-2">
+                                <div class="col-12"><input type="text" id="tNumero" class="form-control" placeholder="Número de tarjeta" inputmode="numeric" maxlength="19"></div>
+                                <div class="col-6"><input type="text" id="tVence" class="form-control" placeholder="MM/AA" maxlength="5" inputmode="numeric"></div>
+                                <div class="col-6"><input type="text" id="tCvv" class="form-control" placeholder="CVV" maxlength="4" inputmode="numeric"></div>
+                            </div>
+                        </div>
+
+                        <div class="detalle-metodo d-none" id="detalle-agencia">
+                            <p class="mb-0">Reserva tu asiento ahora y paga en nuestra agencia hasta <strong>2 horas antes</strong> de la salida. Lleva tu DNI.</p>
+                        </div>
+
+                        <p id="errorPago" class="text-danger mt-3 mb-0"></p>
+                        <button type="button" class="btn-pagar w-100 mt-3" id="btnPagar"></button>
+                    </div>
+                </div>
+
+                <!-- PASO 3: BOLETO -->
+                <div id="pasoExito" class="text-center d-none">
+                    <div class="check-exito">✓</div>
+                    <h4 class="titulo-exito">¡Compra realizada!</h4>
+                    <p>Enviaremos tu boleto a <strong id="exCorreo"></strong></p>
+                    <div class="boleto">
+                        <div class="boleto-cabecera"><span>POMABAMBA EXPRESS</span><span id="exCodigo"></span></div>
+                        <div class="boleto-cuerpo">
+                            <div><span>Pasajero</span><strong id="exNombre"></strong></div>
+                            <div><span>Ruta</span><strong id="exRuta"></strong></div>
+                            <div><span>Fecha</span><strong id="exFecha"></strong></div>
+                            <div><span>Salida</span><strong id="exHora"></strong></div>
+                            <div><span>Asientos</span><strong id="exAsientos"></strong></div>
+                            <div><span>Método</span><strong id="exMetodo"></strong></div>
+                            <div><span>Total</span><strong id="exTotal"></strong></div>
+                        </div>
+                    </div>
+                    <button type="button" class="btn-pagar px-4 me-2" id="btnDescargar">Descargar boleto (.txt)</button>
+                    <button type="button" class="btn-ruta" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js" integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y" crossorigin="anonymous"></script>
-    <script src="script.js"></script>
+    <script src="rutas.js"></script>
 </body>
 </html>

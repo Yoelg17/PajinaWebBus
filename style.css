@@ -151,7 +151,7 @@
   font-weight: bold;
   color: rgb(0, 0, 0);
   position: absolute;
-  top: 85%;
+  top: 81%;
   left: 35%;
   transform: translate(-50%, -50%); 
   z-index: 99;
@@ -176,7 +176,7 @@
   font-weight: bold;
   color: rgb(255, 255, 255);
   position: absolute;
-  top: 85%;
+  top: 81%;
   left: 65%;
 
 }
@@ -190,21 +190,28 @@
 
 /* BARRA DE BUSQUEDA*/
 
-.navbar{
+.buscador {
   background-color: #0F172A;
+  color: #FBBF24;
   width: 70%;
-  display: flex;
-  justify-content:center;
-  padding: 15px;
+  margin: -60px auto 0;      /* sube y se superpone al slider */
+  padding: 20px;
   border: solid 2px #586575;
   border-radius: 18px;
-  position: absolute;
-  top: 105%;
-  left: 50%;
-  transform: translate(-50%, -50%); 
+  position: relative;
   z-index: 99;
-  display: block;
+  text-align: left;
 }
+.btn-buscar {
+  background-color: #FBBF24;
+  color: #0F172A;
+  font-weight: bold;
+  border: none;
+  border-radius: 12px;
+  padding: 8px;
+  height: calc(1.5em + .75rem + 2px);
+}
+.btn-buscar:hover { box-shadow: 1px 1px 12px #FBBF24; }
 
 .express{
   width: 100%;
@@ -476,9 +483,426 @@ PAJINA 2
   background-color: #0F172A;
 }
 
-.rut_hora{
+.titulo-pagina {
+  padding: 110px 20px 30px;   /* el 140 deja espacio por el encabezado fijo */
   text-align: center;
-  color: #FBBF24;
-  font-family: fantasy;
-  font-size: 50px;
 }
+.titulo-pagina-mini {
+  color: #ffffffb1;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+.titulo-pagina-h1 {
+  color: #ffffff;
+  font-family: fantasy;
+  font-size: clamp(30px, 5vw, 56px);   /* se adapta al tamaño de pantalla */
+}
+.titulo-pagina-h1 span {
+  color: #FBBF24;
+}
+.titulo-pagina-sub {
+  color: #ffffffb1;
+  font-size: 18px;
+  max-width: 600px;
+  margin: 12px auto 0;
+}
+.btnEn.activo {
+  background-color: #FBBF24;
+  color: black;
+}
+
+
+/* ============================ */
+/* TARJETAS DE RUTAS */
+/* ============================ */
+
+.tarjeta-ruta {
+  background-color: #586575;
+  border-radius: 12px;
+  overflow: hidden;
+  height: 100%;
+  transition: all 0.4s ease;
+}
+.tarjeta-ruta:hover {
+  transform: translateY(-5px);
+  box-shadow: 2px 2px 14px #FBBF24;
+}
+.tarjeta-ruta img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;   /* recorta la foto sin deformarla */
+}
+.tarjeta-ruta-info {
+  padding: 16px;
+  text-align: center;
+  color: #ffffff;
+}
+.tarjeta-ruta-info h5 {
+  font-weight: bold;
+}
+.precio-desde {
+  color: #FBBF24;
+  font-size: 22px;
+  font-weight: bold;
+}
+.btn-ruta {
+  display: inline-block;
+  background-color: #FBBF24;
+  color: #0F172A;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 8px 20px;
+  border-radius: 20px;
+  border: none;
+cursor: pointer;
+}
+.btn-ruta:hover {
+  box-shadow: 1px 1px 12px #FBBF24;
+}
+/* FILTROS */
+.filtro {
+  background-color: #0F172A;
+  color: #FBBF24;
+  border: 2px solid #FBBF24;
+  border-radius: 20px;
+  padding: 6px 22px;
+  margin: 0 4px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.filtro:hover,
+.filtro.activo {
+  background-color: #FBBF24;
+  color: #0F172A;
+}
+
+/* VENTANA DE HORARIOS */
+.modal-pomabamba {
+  background-color: #0F172A;
+  color: #ffffff;
+  border: 2px solid #FBBF24;
+  border-radius: 16px;
+}
+.modal-pomabamba .modal-header,
+.modal-pomabamba .modal-footer {
+  border-color: #586575;
+}
+.modal-pomabamba .modal-title {
+  color: #FBBF24;
+  font-weight: bold;
+}
+.horario-chip {
+  display: inline-block;
+  background-color: #586575;
+  color: #ffffff;
+  padding: 6px 14px;
+  border-radius: 20px;
+  margin: 4px 6px 4px 0;
+  font-weight: bold;
+}
+/* ============================ */
+/* COMPRA DE PASAJES */
+/* ============================ */
+
+/* Horas elegibles */
+.horario-chip {
+  border: 2px solid transparent;
+  font-family: inherit;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+.horario-chip:hover { border-color: #FBBF24; }
+.horario-chip.elegido {
+  background-color: #FBBF24;
+  color: #0F172A;
+  border-color: #FBBF24;
+}
+.aviso-horario {
+  color: #ff8a8a;
+  margin-right: auto;
+  font-size: 14px;
+}
+
+/* Resumen del viaje */
+.resumen-pasaje {
+  background-color: #1b2740;
+  border: 1px solid #586575;
+  border-radius: 14px;
+  overflow: hidden;
+}
+.resumen-pasaje img {
+  width: 100%;
+  height: 170px;
+  object-fit: cover;
+}
+.resumen-info { padding: 16px; }
+.resumen-info h5 { color: #FBBF24; font-weight: bold; }
+.resumen-lista { list-style: none; padding: 0; margin: 12px 0 0; }
+.resumen-lista li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+  border-bottom: 1px dashed #586575;
+}
+.resumen-lista li span { color: #ffffffb1; }
+.resumen-lista li.total { border-bottom: none; font-size: 20px; }
+.resumen-lista li.total strong { color: #FBBF24; }
+.cantidad-input { width: 70px; text-align: center; }
+.fecha-input { width: 150px; }
+
+/* Métodos de pago */
+.subtitulo-pago { color: #FBBF24; font-weight: bold; margin-bottom: 12px; }
+.metodos {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+.metodo {
+  background-color: #1b2740;
+  color: #ffffff;
+  border: 2px solid #586575;
+  border-radius: 12px;
+  padding: 10px 6px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.25s ease;
+}
+.metodo img { height: 34px; max-width: 100%; object-fit: contain; }
+.icono-metodo { font-size: 28px; line-height: 34px; }
+.metodo:hover { border-color: #FBBF24; }
+.metodo.activo {
+  border-color: #FBBF24;
+  background-color: #2a3550;
+  box-shadow: 0 0 12px #FBBF2477;
+}
+@media (max-width: 575px) {
+  .metodos { grid-template-columns: repeat(2, 1fr); }
+}
+
+.detalle-metodo {
+  background-color: #1b2740;
+  border: 1px solid #586575;
+  border-radius: 12px;
+  padding: 16px;
+  margin-top: 14px;
+}
+.detalle-metodo p { margin-bottom: 6px; }
+.qr-pago {
+  width: 150px;
+  height: 150px;
+  object-fit: contain;
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 6px;
+}
+.numero-pago {
+  color: #FBBF24;
+  font-size: 22px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+/* Botón pagar */
+.btn-pagar {
+  background-color: #FBBF24;
+  color: #0F172A;
+  border: none;
+  border-radius: 12px;
+  padding: 12px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.btn-pagar:hover {
+  box-shadow: 1px 1px 14px #FBBF24;
+  transform: translateY(-2px);
+}
+
+/* Confirmación y boleto */
+.check-exito {
+  width: 70px;
+  height: 70px;
+  line-height: 70px;
+  margin: 0 auto 12px;
+  border-radius: 50%;
+  background-color: #FBBF24;
+  color: #0F172A;
+  font-size: 38px;
+  font-weight: bold;
+}
+.titulo-exito { color: #FBBF24; font-weight: bold; }
+.boleto {
+  background-color: #ffffff;
+  color: #0F172A;
+  max-width: 420px;
+  margin: 18px auto;
+  border-radius: 14px;
+  text-align: left;
+  overflow: hidden;
+}
+.boleto-cabecera {
+  background-color: #FBBF24;
+  padding: 12px 18px;
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+}
+.boleto-cuerpo { padding: 14px 18px; }
+.boleto-cuerpo div {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 0;
+  border-bottom: 1px dashed #cccccc;
+}
+.boleto-cuerpo div:last-child { border-bottom: none; }
+
+/* ============================ */
+/* PREGUNTAS FRECUENTES */
+/* ============================ */
+.faq-titulo {
+  color: #ffffff;
+  font-family: fantasy;
+  text-align: center;
+  margin: 50px 0 24px;
+}
+.faq-titulo span { color: #FBBF24; }
+
+#acordeonFaq { max-width: 800px; margin: 0 auto; }
+#acordeonFaq .accordion-item {
+  background-color: #1b2740;
+  border: 1px solid #586575;
+  margin-bottom: 10px;
+  border-radius: 12px;
+  overflow: hidden;
+}
+#acordeonFaq .accordion-button {
+  background-color: #1b2740;
+  color: #ffffff;
+  font-weight: bold;
+  box-shadow: none;
+}
+#acordeonFaq .accordion-button:not(.collapsed) {
+  background-color: #0F172A;
+  color: #FBBF24;
+}
+#acordeonFaq .accordion-button::after { filter: invert(1); }
+#acordeonFaq .accordion-body { color: #ffffffcc; }
+
+.footer-link { color: inherit; text-decoration: none; }
+.footer-link:hover { color: #FBBF24; }
+/* ============================ */
+/* MAPA DE ASIENTOS */
+/* ============================ */
+.bus-contenedor {
+  background-color: #1b2740;
+  border: 2px solid #586575;
+  border-radius: 40px 40px 16px 16px;
+  padding: 16px 20px 20px;
+  max-width: 340px;
+  margin: 0 auto;
+}
+.bus-frente {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #ffffffb1;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  padding-bottom: 12px;
+  margin-bottom: 12px;
+  border-bottom: 2px dashed #586575;
+}
+.volante {
+  width: 34px;
+  height: 34px;
+  border: 4px solid #586575;
+  border-radius: 50%;
+  position: relative;
+}
+.volante::after {
+  content: "";
+  position: absolute;
+  top: 9px;
+  left: 9px;
+  right: 9px;
+  bottom: 9px;
+  background-color: #586575;
+  border-radius: 50%;
+}
+
+.fila-bus {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+.pasillo { width: 26px; }
+
+.asiento {
+  width: 46px;
+  height: 42px;
+  border-radius: 8px 8px 4px 4px;
+  border: 2px solid transparent;
+  font-weight: bold;
+  font-size: 14px;
+  font-family: inherit;
+  padding: 0;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.asiento.libre { background-color: #586575; color: #ffffff; }
+.asiento.libre:hover { border-color: #FBBF24; transform: translateY(-2px); }
+.asiento.ocupado {
+  background-color: #2b3345;
+  color: #ffffff55;
+  cursor: not-allowed;
+}
+.asiento.elegido {
+  background-color: #FBBF24;
+  color: #0F172A;
+  box-shadow: 0 0 10px #FBBF24aa;
+}
+.mapa-cama .asiento { width: 58px; height: 48px; }
+
+.leyenda {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  flex-wrap: wrap;
+  margin-top: 14px;
+  font-size: 14px;
+}
+.leyenda-item { display: flex; align-items: center; gap: 6px; }
+.leyenda-item .asiento {
+  display: inline-block;
+  width: 22px;
+  height: 20px;
+  cursor: default;
+  pointer-events: none;
+}
+
+.libres { color: #ffffffb1; font-size: 14px; }
+
+.btn-volver {
+  background: none;
+  border: none;
+  color: #FBBF24;
+  font-weight: bold;
+  padding: 0;
+  margin-bottom: 14px;
+  cursor: pointer;
+}
+.btn-volver:hover { text-decoration: underline; }
