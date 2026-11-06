@@ -906,3 +906,112 @@ cursor: pointer;
   cursor: pointer;
 }
 .btn-volver:hover { text-decoration: underline; }
+
+/* ============================================================
+   VERSIÓN TABLET Y CELULAR (en PC no cambia nada)
+   ============================================================ */
+
+/* ---------- Pantallas medianas: los textos grandes no se salen ---------- */
+@media (max-width: 1100px) {
+  .poma, .pomaba { font-size: 11vw; }
+}
+
+/* ---------- TABLET Y MENOR (hasta 992px) ---------- */
+@media (max-width: 992px) {
+
+  html, body { overflow-x: hidden; }
+
+  /* Encabezado: logo arriba, botones abajo */
+  .encabezado {
+    position: relative;
+    flex-direction: column;
+    gap: 10px;
+    padding: 12px 10px;
+  }
+  .logo { width: 170px; }
+  .btnEncabezado { flex-wrap: wrap; justify-content: center; gap: 6px; }
+  .btnEn { font-size: 15px; padding: 5px 12px; border-width: 2.5px; }
+  .encabezado + br, .encabezado + br + br { display: none; }
+  .titulo-pagina { padding-top: 30px; }
+
+  /* Portada: la imagen se recorta sin deformarse */
+  .slider .carousel-item img { height: 560px; object-fit: cover; }
+
+  .viajaseguro { top: 9%; white-space: nowrap; }
+  .poma, .pomaba {
+    font-size: min(11vw, 90px);
+    line-height: 1.1;
+    white-space: nowrap;
+  }
+  .poma { top: 28%; }
+  .pomaba { top: 46%; }
+
+  .pomabam, .pomabamb, .pomabamba {
+    font-size: clamp(11px, 3.9vw, 20px);
+    white-space: nowrap;
+  }
+  .pomabam { top: 61%; }
+  .pomabamb { top: 66%; }
+  .pomabamba { top: 71%; }
+
+  .titubtn, .titulobtn {
+    font-size: clamp(14px, 4.2vw, 28px);
+    padding: 5px 12px;
+    line-height: 1.2;
+    white-space: nowrap;
+    top: 86%;
+  }
+
+  /* Buscador */
+  .buscador { width: 92%; padding: 16px; margin-top: -50px; }
+
+  /* Imágenes "Compromiso con la seguridad": el texto baja debajo de la foto */
+  .express { height: 260px; object-fit: cover; }
+  .ex, .exp { position: static; transform: none; }
+  .ex { font-size: 34px; padding: 18px 16px 6px; }
+  .exp { font-size: 18px; padding: 0 20px 10px; }
+
+  /* Rutas disponibles */
+  .rutas { width: auto; padding: 0 10px; font-size: 26px; margin-top: 10px; }
+  .lasrutas { flex-wrap: wrap; gap: 20px; padding: 16px; }
+
+  /* Por qué elegirnos / Empresas aliadas */
+  .otrasemprs { padding: 14px; border-radius: 24px; }
+  .elejir { flex-direction: column; gap: 20px; }
+  .eleji { flex: none; }
+  .elejirnos1, .elejirnos2 { height: auto; }
+  .elejirnos1 { font-size: 18px; }
+  .imgempresas { width: 90px; height: 90px; }
+  .buttnemprs { margin-left: 0; }
+
+  /* Footer */
+  .footer { padding: 24px 16px; }
+  .footer-content { flex-direction: column; gap: 24px; }
+  .footx, .sosiales { text-align: center; }
+  .footer-social { list-style: none; padding: 0; }
+  .derechos { margin-top: 20px; }
+}
+
+/* ---------- CELULAR (hasta 576px) ---------- */
+@media (max-width: 576px) {
+  .logo { width: 150px; }
+  .btnEn { font-size: 14px; padding: 4px 10px; }
+
+  .slider .carousel-item img { height: 440px; }
+  .viajaseguro { top: 10%; }
+  .poma { top: 27%; }
+  .pomaba { top: 41%; }
+  .pomabam { top: 54%; }
+  .pomabamb { top: 59%; }
+  .pomabamba { top: 64%; }
+
+  .titubtn, .titulobtn { top: 82%; }
+  .titubtn { left: 30%; }
+  .titulobtn { left: 70%; }
+
+  .express { height: 200px; }
+  .ex { font-size: 26px; }
+  .exp { font-size: 16px; }
+  .rutas { font-size: 22px; }
+  .elejirnos1 { font-size: 16px; }
+}
