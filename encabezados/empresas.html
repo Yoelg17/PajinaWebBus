@@ -20,8 +20,74 @@
             <a href="contactos.html" class="btnEn">contactos</a>
         </nav>
     </header>
+
+
+    <section class="titulo-pagina">
+    <p class="titulo-pagina-mini">Viaja con los mejores</p>
+    <h1 class="titulo-pagina-h1">NUESTRAS <span>EMPRESAS</span> ALIADAS</h1>
+    <p class="titulo-pagina-sub">Trabajamos con empresas de transporte que cumplen con nuestros estándares de seguridad y puntualidad.</p>
+</section>
+
+<section class="container pb-5">
+    <div class="row g-4" id="listaEmpresas"></div>
+</section>
+<!-- SÉ NUESTRA ALIADA -->
+<section class="container pb-5">
+    <div class="aliada">
+        <div>
+            <h2 class="aliada-titulo">¿Quieres ser <span>empresa aliada</span>?</h2>
+            <p class="aliada-texto">Súmate a Pomabamba Express, llega a más pasajeros y vende tus pasajes en nuestra plataforma.</p>
+        </div>
+        <a href="contactos.html?asunto=aliada" class="btn-aliada">Quiero ser aliada</a>
+    </div>
+</section>
+<!-- VENTANA DE DETALLE DE EMPRESA -->
+<div class="modal fade" id="modalEmpresa" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content modal-pomabamba">
+            <div class="modal-header">
+                <h5 class="modal-title" id="empTitulo"></h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+            </div>
+            <div class="modal-body" id="empCuerpo"></div>
+            <div class="modal-footer">
+                <a href="contactos.html" class="btn-ruta-borde">Contactar</a>
+                <a href="rutas.html" class="btn-ruta">Ver rutas</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="footer-content">
+        <div class="footer-contactos">
+            <h3 class="footers">Contáctanos</h3>
+            <p class="footerp">Dirección: (pon tu dirección real)</p>
+            <p class="footerp">Teléfono: (pon tu número real)</p>
+            <p class="footerp">Correo electrónico: (pon tu correo real)</p>
+        </div>
+        <div>
+            <h3 class="footers">ayuda</h3>
+            <p class="footerp"><a href="#faq" class="footer-link">Preguntas frecuentes</a></p>
+            <p class="footerp"><a href="contactos.html" class="footer-link">Contáctanos</a></p>
+            <p class="footerp">Política de privacidad</p>
+        </div>
+        <div>
+            <h3 class="footers">redes sociales</h3>
+            <h4 class="footx">Síguenos para no perderte ninguna novedad</h4>
+            <a href="#"><img class="imgredes" src="../imagenes/redes-sociales/facebbok.jpg" alt="Facebook"></a>
+            <a href="#"><img class="imgredes" src="../imagenes/redes-sociales/instagram.jpg" alt="Instagram"></a>
+            <a href="#"><img class="imgredes" src="../imagenes/redes-sociales/tiktok.jpg" alt="TikTok"></a>
+            <a href="#"><img class="imgredes" src="../imagenes/redes-sociales/Twitter.jpg" alt="Twitter"></a>
+        </div>
+    </div>
+    <br>
+    <p class="derechos">&copy; 2026 Pomabamba Express. Todos los derechos reservados.</p>
+</footer>
+
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-    <script src="empresas.js"></script>
+    <script src="../Scripts/empresas.js"></script>
     
 </body>
 </html>

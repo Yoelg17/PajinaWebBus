@@ -1015,3 +1015,196 @@ cursor: pointer;
   .rutas { font-size: 22px; }
   .elejirnos1 { font-size: 16px; }
 }
+/* ============================ */
+/* EMPRESAS */
+/* ============================ */
+.lista-rutas-empresa {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 12px;
+  color: #FBBF24;
+  font-weight: bold;
+}
+.chip-servicio {
+  display: inline-block;
+  background-color: #0F172A;
+  color: #FBBF24;
+  border: 1px solid #FBBF24;
+  border-radius: 20px;
+  padding: 3px 12px;
+  margin: 3px;
+  font-size: 13px;
+  font-weight: bold;
+}
+/* ============================ */
+/* EMPRESAS: ESTRELLAS, DATOS Y ALIADA */
+/* ============================ */
+.estrellas { margin-bottom: 10px; }
+.estrellas-icono {
+  color: #FBBF24;
+  font-size: 20px;
+  letter-spacing: 2px;
+}
+.estrellas-num { color: #ffffffb1; font-size: 14px; }
+
+.datos-rapidos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 6px;
+  background-color: #0F172A;
+  border-radius: 10px;
+  padding: 10px 6px;
+  margin: 12px 0;
+}
+.datos-rapidos strong {
+  display: block;
+  color: #FBBF24;
+  font-size: 22px;
+  line-height: 1.1;
+}
+.datos-rapidos span { font-size: 13px; color: #ffffffb1; }
+
+.btn-ruta-borde {
+  display: inline-block;
+  background-color: transparent;
+  color: #FBBF24;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 6px 18px;
+  border: 2px solid #FBBF24;
+  border-radius: 20px;
+  margin: 4px;
+  transition: all 0.3s ease;
+}
+.btn-ruta-borde:hover {
+  background-color: #FBBF24;
+  color: #0F172A;
+}
+.tarjeta-ruta-info .btn-ruta { margin: 4px; }
+
+/* Ventana de detalle */
+.emp-foto {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+.emp-datos li { gap: 16px; }
+.emp-datos strong { text-align: right; }
+
+/* Sección "Sé nuestra aliada" */
+.aliada {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  background-color: #1b2740;
+  border: 2px solid #FBBF24;
+  border-radius: 16px;
+  padding: 28px 32px;
+}
+.aliada-titulo {
+  color: #ffffff;
+  font-family: fantasy;
+  margin-bottom: 8px;
+}
+.aliada-titulo span { color: #FBBF24; }
+.aliada-texto { color: #ffffffb1; margin: 0; max-width: 560px; }
+.btn-aliada {
+  background-color: #FBBF24;
+  color: #0F172A;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 12px 28px;
+  border-radius: 14px;
+  transition: all 0.3s ease;
+}
+.btn-aliada:hover {
+  box-shadow: 1px 1px 14px #FBBF24;
+  transform: translateY(-2px);
+}
+/* ============================ */
+/* NOSOTROS */
+/* ============================ */
+.nos-h2 {
+  color: #ffffff;
+  font-family: fantasy;
+  margin-bottom: 16px;
+}
+.nos-h2 span { color: #FBBF24; }
+.nos-texto { color: #ffffffcc; font-size: 17px; line-height: 1.7; }
+
+.nos-historia {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 32px;
+  align-items: center;
+}
+.nos-img {
+  width: 100%;
+  height: 340px;
+  object-fit: cover;
+  border-radius: 16px;
+  border: 2px solid #586575;
+}
+
+.tarjeta-mv {
+  background-color: #1b2740;
+  border: 1px solid #586575;
+  border-radius: 16px;
+  padding: 28px;
+  height: 100%;
+  color: #ffffffcc;
+  transition: all 0.3s ease;
+}
+.tarjeta-mv:hover {
+  border-color: #FBBF24;
+  transform: translateY(-4px);
+}
+.tarjeta-mv h3 { color: #FBBF24; font-weight: bold; }
+.mv-icono { font-size: 38px; margin-bottom: 8px; }
+
+.numeros-fondo {
+  background-color: #1b2740;
+  border-top: 2px solid #FBBF24;
+  border-bottom: 2px solid #FBBF24;
+  padding: 40px 0;
+  margin: 20px 0;
+}
+.numeros {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 24px;
+  text-align: center;
+}
+.numero-item strong {
+  display: block;
+  color: #FBBF24;
+  font-family: fantasy;
+  font-size: 54px;
+  line-height: 1.1;
+}
+.numero-item span { color: #ffffffb1; font-size: 16px; }
+
+.valores {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+}
+.valor-item {
+  background-color: #1b2740;
+  border: 1px solid #586575;
+  border-radius: 14px;
+  padding: 22px;
+  text-align: center;
+  color: #ffffffb1;
+  transition: all 0.3s ease;
+}
+.valor-item:hover {
+  border-color: #FBBF24;
+  box-shadow: 0 0 14px #FBBF2455;
+  transform: translateY(-4px);
+}
+.valor-item h4 { color: #ffffff; font-weight: bold; }
+.valor-item p { margin: 0; }
